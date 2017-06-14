@@ -9,8 +9,8 @@ const storedPromises = {
 let inc = 0;
 
 const mapPromises = function (promise){
-  storedPromises.all.push(promise);
-  storedPromises.pending.push({
+  storedPromises.all = storedPromises.all.concat(promise);
+  storedPromises.pending = storedPromises.pending.concat({
     id: inc,
     promise
   });
@@ -19,13 +19,13 @@ const mapPromises = function (promise){
   promise.then((promiseAction) => {
     storedPromises.pending = storedPromises.pending.filter(
       (p) => p.id !== currentIndex);
-    storedPromises.resolved.push(promiseAction);
+    storedPromises.resolved = storedPromises.resolved.concat(promiseAction);
 
   },(promiseAction) => {
 
     storedPromises.pending = storedPromises.pending.filter(
       (p) => p.id !== currentIndex);
-    storedPromises.rejected.push(promiseAction);
+    storedPromises.rejected = storedPromises.rejected.concat(promiseAction);
 
   });
 }

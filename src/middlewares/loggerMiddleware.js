@@ -4,7 +4,7 @@ let actions = [];
 const actionsLoggerMiddleware = store => next => action => {
 
   if (isValidAction(action)) {
-    actions.push(action);
+    actions = actions.concat(action);
   }
   return next(action);
 };

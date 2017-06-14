@@ -1,6 +1,6 @@
 {
   "name": "redux-test-belt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript Testing utilities for Redux, the easy way.",
   "keywords": [
     "redux",

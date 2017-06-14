@@ -4,7 +4,7 @@ const PREFIX_ACTION = '✋BLOCKED_ACTION';
 
 const blockMiddleware = (allow = (st, act) => true) => store => next => action => {
   if (allow(store.getState(), action) === false) {
-    blocked.push(action);
+    blocked = blocked.concat(action);
     action = {
       type: PREFIX_ACTION,
       payload: action

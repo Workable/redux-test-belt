@@ -7,7 +7,7 @@ let previousState;
 const orphansMiddleware = store => next => action => {
   const currentState = store.getState();
   if( isEqual(previousState, currentState) || isUndefined(previousState)) {
-    orphanActions.push(action);
+    orphanActions = orphanActions.concat(action);
   }
   previousState = currentState;
   return next(action);
