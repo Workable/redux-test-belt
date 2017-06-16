@@ -8,7 +8,9 @@
     "test:watch": "npm test -- --watch"
   },
   "ava": {
-    "files": ["__tests__/*.js"],
+    "files": [
+      "__tests__/*.js"
+    ],
     "require": [
       "babel-register"
     ],

@@ -13,5 +13,6 @@ cache:
   directories:
   - $HOME/.npm
   - examples/react-async-example/node_modules
+  - examples/react-enzyme-example/node_modules
   - examples/react-example/node_modules
-  - examples/vanilla-js-example/node_modules
+  - examples/vanilla-js-example/node_modules 
