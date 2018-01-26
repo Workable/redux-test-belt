@@ -1,4 +1,8 @@
-import {isPlainObject, every, isObject, isFunction, find} from 'lodash';
+import isPlainObject from 'lodash/isPlainObject';
+import every from 'lodash/every';
+import isObject from 'lodash/isObject';
+import isFunction from 'lodash/isFunction';
+import find from 'lodash/find';
 
 
 export const isValidAction = (action) => {

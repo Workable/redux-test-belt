@@ -1,5 +1,5 @@
 import { applyMiddleware, compose, createStore } from 'redux';
-import { isFunction, isObject, some } from 'lodash';
+import isFunction from 'lodash/isFunction'
 import { orphansMiddleware, orphans } from '../middlewares/orphansMiddleware';
 import { promiseMiddleware, promises } from '../middlewares/promiseMiddleware'
 

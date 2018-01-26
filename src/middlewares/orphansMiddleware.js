@@ -1,4 +1,5 @@
-import { isEqual, isUndefined } from 'lodash';
+import isEqual from 'lodash/isEqual';
+import isUndefined from 'lodash/isUndefined';
 import { has } from '../utils';
 
 let orphanActions = [];
